@@ -1,0 +1,528 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: #f1f1f1;
+    margin: 0;
+    padding: 0;
+  }
+
+  .create-classfieds-container{
+    margin: 50px 400px;
+  }
+  h1 {
+    text-align: center;  
+    color: #333;
+  }
+
+  h3{
+    color: dodgerblue;
+  }
+
+  [type=radio] {
+    position: absolute; 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* IMAGE STYLES */
+  [type=radio] + div {
+    cursor: pointer;
+  }
+  
+  /* CHECKED STYLES */
+  [type=radio]:checked + div > svg{
+    color: dodgerblue;
+  }
+  
+
+  .automotive-category{
+    grid-area: auto;
+    text-align: center;
+    box-shadow: 0px 0px 6px gray;
+    background-color: #fff;
+    margin-top: 5px;
+    width: 99%;
+  }
+  .automotive-category svg{
+    color: gray;
+  }
+  .automotive-category p{
+    color: gray;
+    margin: 0;
+    padding: 0;
+  }
+  .property-category{
+    grid-area: land;
+    text-align: center;
+    box-shadow: 0px 0px 6px gray;
+    background-color: #fff;
+    margin-top: 5px;
+    width: 99%;
+  }
+  .property-category svg{
+    color: gray;
+  }
+  .property-category p{
+    color: gray;
+    margin: 0;
+    padding: 0;
+  }
+
+  .employment-category{
+    grid-area: jobs;
+    text-align: center;
+    box-shadow: 0px 0px 6px gray;
+    background-color: #fff;
+    margin-top: 5px;
+    width: 99%;
+  }
+  .employment-category > svg{
+    color: gray;
+  }
+  .employment-category > p{
+    color: gray;
+    margin: 0;
+    padding: 0;
+  }
+  .business-category{
+    grid-area: busi;
+    text-align: center;
+    box-shadow: 0px 0px 6px gray;
+    background-color: #fff;
+    margin-top: 5px;
+    width: 99%;
+  }
+  .business-category > svg{
+    color: gray;
+  }
+  .business-category > p{
+    color: gray;
+    margin: 0;
+    padding: 0;
+  }
+
+  .electronics-category{
+    grid-area: elect;
+    text-align: center;
+    box-shadow: 0px 0px 6px gray;
+    background-color: #fff;
+    margin-top: 5px;
+    width: 99%;
+  }
+  .electronics-category > svg{
+    color: gray;
+  }
+  .electronics-category > p{
+    color: gray;
+    margin: 0;
+    padding: 0;
+  }
+  .all-categories{
+    grid-area: all-cat;
+    text-align: center;
+    box-shadow: 0px 0px 6px gray;
+    background-color: #fff;
+    margin-top: 5px;
+    width: 99%;
+  }
+  .all-categories > svg{
+    color: gray;
+  }
+  .all-categories > p{
+    color: gray;
+    margin: 0;
+    padding: 0;
+  }
+  .category-type{
+    margin-bottom: 10px;
+    display: grid;
+    grid-template-areas: 
+    'auto land'
+    'jobs busi'
+    'elect all-cat';
+    grid-gap: 2px;
+  }
+  #autoType{
+    display: none;
+  }
+.tab{
+  display: none;
+}
+
+ .car-info-title{
+  grid-template: car-info-title;
+} 
+.car-make{
+  grid-area: make;
+  width: 270px;
+}
+
+.car-model{
+  grid-area: model;
+  width: 270px;
+}
+
+.car-mileage{
+  grid-area: mileage;
+  width: 270px;
+}
+
+.car-body{
+  grid-area: body;
+  width: 270px;
+}
+
+.car-color{
+  grid-area: color;
+  width: 270px;
+}
+
+.car-year{
+  grid-area: year;
+  width: 270px;
+}
+.transmission{
+  grid-area: transmission;
+  width: 270px;
+}
+
+.fuel-type{
+  grid-area: fuel;
+  width: 270px;
+}
+#additionalCarInfo{
+  display: grid;
+  grid-template-areas: 
+  'car-info-title car-info-title'
+  'make model'
+  'mileage body'
+  'color year'
+  'transmission fuel';
+  grid-gap: 2px;
+}
+
+.spares-title{
+  grid-area: spares-title;
+}
+
+.car-auto-parts{
+  grid-area: car-spares-select;
+}
+
+#car-spares{
+  display: grid;
+  grid-template-areas: 
+  'spares-title'
+  'car-spares-select';
+}
+
+.location-heading{
+  grid-area: loc-head;
+}
+.province{
+  grid-area: provinces;
+
+}
+
+.city{
+  grid-area: cities;
+  width: 270px;
+}
+
+.area{
+  grid-area: areas;
+  width: 270px;
+}
+
+#location{
+  display: grid;
+  grid-gap: 2px;
+  grid-template-areas: 
+  'loc-head loc-head'
+  'provinces provinces'
+  'cities areas';
+}
+
+  .input {
+    padding: 8px 16px;
+    width: 100%;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: Raleway;
+    border: 1px solid dodgerblue;
+    cursor: pointer;
+  }
+  .input {
+    padding: 8px 16px;
+    width: 100%;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: Raleway;
+    border: 1px solid dodgerblue;
+    cursor: pointer;
+  }
+  .input-error{
+    box-shadow: 0 0 10px firebrick;
+  }
+  /* Mark input boxes that gets an error on validation: */
+  .input.invalid {
+    background-color: #ffdddd;
+  }
+ 
+
+
+  .ck-editor__editable_inline {
+    min-height: 200px;  
+  }
+  .pricing-heading{
+    grid-area: price-head;
+  }
+.amount-type{
+  grid-area: amount-types;
+  margin-top: 17px;
+}
+
+.amount{
+  grid-area: amounts;
+}
+
+
+#pricing{
+  display: grid;
+  grid-template-areas: 
+  'price-head price-head'
+  'amount-types amounts';
+  grid-gap: 2px;
+}
+.the-price{
+  width: 270px;
+}
+#subBtn{
+  justify-content: flex-end;
+}
+.sub-btn{
+  background-color: dodgerblue;
+  color: #fff;
+  padding: 10px; 
+  width: 200px;
+  cursor: pointer;
+  border: none;
+  margin: 10px;
+}
+
+.sub-btn:hover{
+  opacity: 0.8;
+}
+
+
+  .image-upload-one{
+    grid-area: img-u-one;
+    display: flex;
+    justify-content: center;
+  }
+  .image-upload-two{
+    grid-area: img-u-two;
+    display: flex;
+    justify-content: center;
+  }
+  .image-upload-three{
+    grid-area: img-u-three;
+    display: flex;
+    justify-content: center;
+  }
+  .image-upload-four{
+    grid-area: img-u-four;
+    display: flex;
+    justify-content: center;
+  }
+  .image-upload-five{
+    grid-area: img-u-five;
+    display: flex;
+    justify-content: center;
+  }
+  .image-upload-six{
+    grid-area: img-u-six;
+    display: flex;
+    justify-content: center;
+  }
+
+  .image-upload-container{
+    display: grid;
+    grid-template-areas: 'img-u-one img-u-two img-u-three'
+     'img-u-four img-u-five img-u-six';
+  }
+  .center {
+    display:inline;
+  }
+
+  .form-input {
+    width: 106.1px;
+    padding:1px;
+    background:#fff;
+    border:2px dashed dodgerblue;
+  }
+  .form-input input {
+    display:none;
+  }
+  .form-input label {
+    display:block;
+    width:100px;
+    height: auto;
+    max-height: 100px;
+    background:#333;
+    border-radius:10px;
+    cursor:pointer;
+  }
+  
+  .form-input img {
+    width:100px;
+    max-height: 100px;
+    margin: 2px;
+    opacity: .4;
+  }
+
+  .imgRemove{
+    position: relative;
+    bottom: 114px;
+    left: 68%;
+    background-color: transparent;
+    border: none;
+    font-size: 30px;
+    outline: none;
+  }
+  .imgRemove::after{
+    content: ' \21BA';
+    color: #fff;
+    font-weight: 900;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+
+  .small{
+    color: firebrick;
+  }
+
+  .check-container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Hide the browser's default checkbox */
+  .check-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #333;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .check-container:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  /* When the checkbox is checked, add a blue background */
+  .check-container input:checked ~ .checkmark {
+    background-color: #2196F3;
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .check-container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+  .check-container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+
+  @media screen and (max-width: 1200px) { 
+    .create-classfieds-container{
+      margin: 50px 50px;
+    }
+  }
+
+  @media screen and (max-width: 550px) { 
+    .create-classfieds-container{
+      margin: 50px 0px;
+    }
+
+    #additionalCarInfo{
+      grid-template-areas: 
+      'car-info-title'
+      'make'
+       'model'
+      'mileage' 
+      'body'
+      'color' 
+      'year'
+      'transmission' 
+      'fuel';
+    }
+    
+    .city{
+      width: 98%;
+    }
+    
+    .area{
+      width: 98%;
+    }
+    .category-type{
+      width: 100%; 
+  }
+    
+    .input{
+        width: 100%; 
+    }
+
+    
+   
+    .custom-pricing-select{
+      width: 168px !important;
+    }
+    
+  }
+
+
+ 
